@@ -1,0 +1,28 @@
+application: bestonlinedealsindia
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /stylesheet
+  static_dir: stylesheet
+
+- url: /javascript
+  static_dir: javascript
+
+- url: /pages
+  static_dir: pages
+
+- url: .*
+  script: main.app
+
+- url: /redirect
+  script: main.redirect
+  
+- url: /search
+  script: main.search
